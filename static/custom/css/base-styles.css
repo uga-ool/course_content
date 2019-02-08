@@ -14,6 +14,11 @@
  * limitations under the License.
  */
 
+
+.mdl-layout__container {
+  top: 0px;
+}
+
 body, .content p, ul, ol {
   font-family: 'Merriweather Sans', 'Tahoma', sans-serif;
   font-weight: 300;

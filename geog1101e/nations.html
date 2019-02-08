@@ -25,46 +25,45 @@
       }
   </style>
   <body>
-<div class="mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100"><header class="header mdl-layout__header mdl-layout__header--scroll">
-<div class="mdl-layout__header-row">
-<div class="logo-header"></div>
-<h1 class="header mdl-layout-title">GEOG1101E:&nbsp;Human Geography</h1>
-</div>
-</header>
-<div class="ribbon"></div>
-<main class="main mdl-layout__content">
-<div class="container mdl-grid">
-<div class="content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--12-col">
-    <div id="app">
+    <div class="mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100"><header class="header mdl-layout__header mdl-layout__header--scroll">
+    <div class="mdl-layout__header-row">
+    <div class="logo-header"></div>
+    <h1 class="header mdl-layout-title">GEOG1101E:&nbsp;Human Geography</h1>
+    </div>
+    </header>
+    <div class="ribbon"></div>
+    <main class="main mdl-layout__content">
+    <div class="container mdl-grid">
+    <div class="content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--12-col">
+        <div id="app">
 
-        <div v-for="n in nations">
-            <h2>{{n.name}}</h2>
-            <div class="country-wrapper">
-                <div><img v-bind:src="'assets/img/flags/' + n.flag" /></div>
-                <div>{{n.flag}}</div>
-                <div>{{n.population}}<br />
-                     {{n.ethnicityBreakdown}}</div>
-                <div>{{n.largestCity}}</div>
-                <div>{{n.politicalSystem}}</div>
-                <div>{{n.econStratDesc}}</div>
-                <div>{{n.language}}<br />
-                     {{n.religion}}</div>
-                <div>{{n.popPyramid}}</div>
-                <div>{{n.povertyIndex}}</div>
+            <div v-for="n in nations">
+                <h2>{{n.name}}</h2>
+                <div class="country-wrapper">
+                    <div><img v-bind:src="'assets/img/flags/' + n.flag" /></div>
+                    <div>{{n.flag}}</div>
+                    <div>{{n.population}}<br />
+                        {{n.ethnicityBreakdown}}</div>
+                    <div>{{n.largestCity}}</div>
+                    <div>{{n.politicalSystem}}</div>
+                    <div>{{n.econStratDesc}}</div>
+                    <div>{{n.language}}<br />
+                        {{n.religion}}</div>
+                    <div>{{n.popPyramid}}</div>
+                    <div>{{n.povertyIndex}}</div>
+                </div>
             </div>
         </div>
+    <hr />
     </div>
-<hr />
-</div>
-</div>
-<footer class="footer mdl-mini-footer">
-<div class="mdl-mini-footer--left-section">
-<div class="mdl-logo">
-<div class="logo-footer"></div>
-<span class="course-title">GEOG1101E:<br />Human Geography</span></div>
-</div>
-</footer></main></div>
-<p>
+    </div>
+    <footer class="footer mdl-mini-footer">
+    <div class="mdl-mini-footer--left-section">
+    <div class="mdl-logo">
+    <div class="logo-footer"></div>
+    <span class="course-title">GEOG1101E:<br />Human Geography</span></div>
+    </div>
+    </footer></main></div>
 <script src="../static/lib/js/material.min.js"></script>
 <script src="https://unpkg.com/vue"></script>
 
@@ -375,7 +374,5 @@
         }
     })
 </script>
-
-</p>
 </body>
 </html>
