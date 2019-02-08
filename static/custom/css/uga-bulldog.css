@@ -1,0 +1,48 @@
+.mdl-button.mdl-button--colored {
+    color: #BA0C2F;
+}
+
+.ribbon {
+  background-color: #BA0C2F;
+}
+
+.header .mdl-layout__header-row {
+  background-color: #D6D2C4;
+  color: #000000;
+}
+
+.logo-header {
+ background: url('../../img/logo-color-50h.png') center right no-repeat;
+}
+
+.footer {
+  background-color: #554F47;
+}
+
+.footer .mdl-logo {
+  color: #e9e7e5;
+}
+
+.logo-footer {
+  background: url('../../img/footer-logo-white-100.png') center right no-repeat;
+}
+
+/* unvisited link */
+a:link {
+    color: #BA0C2F;
+}
+
+/* visited link */
+a:visited {
+    color: #BA0C2F;
+}
+
+/* mouse over link */
+a:hover {
+    color: #9ea2a2;
+}
+
+/* selected link */
+a:active {
+    color: #BA0C2F;
+}

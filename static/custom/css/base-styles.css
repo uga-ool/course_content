@@ -1,0 +1,681 @@
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+body, .content p, ul, ol {
+  font-family: 'Merriweather Sans', 'Tahoma', sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+h1, h2 {
+  font-family: 'Merriweather', serif;
+  margin: 5px 0;
+  line-height: 2em;
+}
+
+h3, h4, h5, h6 {
+  font-family: 'Merriweather Sans', 'Tahoma', sans-serif;
+  margin: 5px 0;
+  line-height: 2em; 
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.6em;
+}
+
+.subtitle {
+  margin-top: -15px;
+}
+
+h4 {
+  font-size: 1.3em;
+}
+
+h5 {
+  font-size: 1.1em;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+blockquote {
+  font-size: 18px;
+}
+
+.heavy {
+  font-weight: 400;
+}
+
+.clear-both {
+  clear: both;
+}
+
+.ribbon {
+  width: 100%;
+  height: 40vh;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+}
+
+.main {
+  margin-top: -35vh;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+}
+
+.header .mdl-layout-title {
+  font-family: 'Merriweather', serif;
+  font-size: 1.375em;
+  max-width: 375px;
+  line-height: 1.3em;
+}
+
+.header .mdl-layout__header-row {
+  padding-left: 40px;
+}
+
+.logo-header {
+ display:none;
+ position: absolute;
+ top:5px;
+ width: 284px;
+ height: 50px;
+}
+
+.container {
+  max-width: 1600px;
+  width: calc(100% - 16px);
+  margin: 0 auto;
+}
+
+.content {
+  border-radius: 2px;
+  padding: 30px 56px;
+  margin-bottom: 80px;
+}
+
+.layout.is-small-screen .content {
+  padding: 40px 28px;
+}
+
+.footer {
+  padding-left: 40px;
+  min-height: 200px;
+}
+
+.footer .mdl-logo {
+  font-family: 'Merriweather', serif;
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+
+.logo-footer {
+  width: 287px;
+  height: 100px;
+}
+
+.course-title {
+  display:block;
+  max-width: 400px
+}
+
+.footer .mdl-mini-footer--link-list a {
+  font-size: 13px;
+}
+
+.logo-header {
+  display: none;
+}
+
+ul.plain, ol.plain {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ol.roomy li, ul.roomy li {
+  margin-bottom: 10px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.full-table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.half-table {
+  table-layout:fixed;
+  width: 50%
+}
+
+th {
+  background-color: #666666;
+  color: #ffffff;
+}
+
+td {
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+/* Centers the text in centered tables */
+.center td {
+  text-align: center;
+}
+
+.table-column-50 {
+  width: 50px;
+}
+
+.table-column-75 {
+  width: 75px;
+}
+
+.table-column-100 {
+  width: 100px;
+}
+
+.table-column-125 {
+  width: 125px;
+}
+
+.table-column-150 {
+  width: 150px;
+}
+
+.table-column-200 {
+  width: 200px;
+}
+
+.table-column-250 {
+  width: 250px;
+}
+
+.table-column-400 {
+  width: 400px;
+}
+
+.table-column-500 {
+  width: 500px;
+}
+
+.table-row-grey {
+  background-color: #f4f4f4;
+}
+
+.table-cell-center {
+  text-align: center;
+}
+table ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+table ul ul {
+  margin: 0 0 0 25px;
+  list-style: circle;
+}
+
+table + p {
+  margin-top: 15px;
+}
+
+/* Options for table borders */
+
+.table-hborders {
+        border-collapse: collapse;
+        border-right: 1px solid black;
+        border-left: 1px solid black;
+}
+
+.table-hborders tr {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.table-borders, .table-borders td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th {
+  padding: 2px;
+}
+/* Image Card Sizes */
+
+.mdl-card img {
+  margin-left: -16px;
+}
+
+/* Squares */
+.card-square-500.mdl-card {
+  width: 250px;
+  height: 500px;
+  margin-bottom: 20px;
+}
+
+.card-square-400.mdl-card {
+  width: 250px;
+  height: 400px;
+  margin-bottom: 20px;
+}
+
+.card-square-300.mdl-card {
+  width: 250px;
+  height: 400px;
+  margin-bottom: 20px;
+}
+
+/* Rectangles */
+.card-rectangle-400.mdl-card {
+  width: 400px;
+  height: 500px;
+  margin-bottom: 20px;
+}
+
+/* Wide */
+
+.card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
+/* Image Card Alignment 
+   Left & Right Alignment Begins @920px */
+.card-left, .card-right, .card-center {
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+/* Video Embeds */
+.video-card, .video-card-wide {
+  display: inline-block;
+  margin: 30px auto;
+  min-height: 500px;
+  border-radius: 4px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);   
+  transition: .6s ease;
+  background: white;
+  text-align: center;
+}
+
+.video-card:hover {
+  box-shadow: 0 8px 10px rgba(50, 50, 90, 0.1), 0 8px 15px rgba(0, 0, 0, 0.07);
+}
+
+/* box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12); 
+box-shadow: 0 15px 35px rgba(50, 50, 90, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07); */
+
+.video-title, .video-description {
+  display: block;
+  max-width: 400px;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.video-card-wide .video-title, .video-card-wide .video-description {
+  display: block;
+  max-width: 900px;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.video-title {
+  font-family: 'Merriweather', serif;
+  font-size: 1.5em;
+  margin-top: 15px;
+  color: #424242;
+  line-height: 1.2em;
+}
+
+.video-description {
+  margin-bottom: 10px;
+}
+
+.video-card hr {
+  width: 40%;
+  margin-left: 10px;
+}
+
+.video-dark {
+  background-color: #222222;
+}
+
+.video-dark span {
+  color: #EEEEEE;
+}
+
+.video-card iframe {
+  margin-left: -27px;
+  margin-top: -17px;
+}
+
+.video-card-wide iframe {
+  margin-left: 0px;
+  margin-top: -17px;
+}
+
+/* Grid Dimensions */
+.content-grid {
+  width: 600px;
+}
+
+.content-grid div {
+  margin: 10px;
+}
+
+/* Blockquotes */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
+blockquote{
+  font-size: 1.1em;
+  width:40%;
+  margin:40px 25px;
+  font-family:Open Sans;
+  font-style:italic;
+  color: #554F47;
+  padding:.9em 30px .9em 75px;
+  border-left:8px solid #66435A ;
+  line-height:1.6;
+  position: relative;
+  background:#e7e8e8;
+  float:right;
+}
+
+blockquote::before{
+  font-family:Arial;
+  content: "\201C";
+  color:#66435A;
+  font-size:4em;
+  position: absolute;
+  left: 10px;
+  top:-10px;
+}
+
+blockquote::after{
+  content: '';
+}
+
+blockquote span{
+  display:block;
+  color:#66435A;
+  font-style: normal;
+  font-weight: bold;
+  margin-top:1em;
+}
+
+/* Media Queries */
+
+@media (min-width: 600px) {
+  .card-wide-512.mdl-card {
+    width: 512px;
+  }
+  .card-wide-800.mdl-card {
+    width: 512px;
+  }
+
+  .content {
+    min-width: 580px;
+  }
+  
+}
+
+@media (min-width: 760px) {
+
+  .content {
+    min-width: 740px;
+  }
+  /* Grid Dimensions */
+  .content-grid {
+    width: 700px;
+  }
+  
+}
+
+@media (min-width: 920px) {
+
+  .content {
+    min-width: 898px;
+  }
+  /* Grid Dimensions */
+  .content-grid {
+    width: 900px;
+  }
+
+  .logo-header {
+    display:block;
+    right: 70px;
+  }
+
+  .logo-footer {
+    display:block;
+    position: absolute;
+    right: 125px;
+  }
+
+  .course-title {
+    position: absolute;
+    left:130px;
+    font-size: 20px;
+    max-width: 350px;
+  }
+
+  .header .mdl-layout-title {
+    margin-left: 30px;
+    max-width: 500px;
+  }
+
+  /* Image Card Sizes */
+
+  /* Squares */
+  .card-square-500.mdl-card {
+    width: 500px;
+    height: 500px;
+  }
+
+  .card-square-400.mdl-card {
+    width: 400px;
+    height: 400px;
+  }
+
+  .card-square-300.mdl-card {
+    width: 300px;
+    height: 300px;
+  }
+
+  /* Wide */
+
+  .card-wide-512.mdl-card {
+    width: 512px;
+  }
+
+  .card-wide-800.mdl-card {
+    width: 800px;
+  }
+
+  /* Image Card Alignment */
+  .card-left {
+    float: left;
+    margin-right: 15px;
+  }
+
+  .card-right {
+    float: right;
+    margin-left: 15px;
+  }
+  .card-center {
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
+  
+  /* Video Alignment */
+  .video-left {
+    float: left;
+    margin-right: 20px;
+  }
+
+  .video-right {
+    float: right;
+    margin-left: 20px;
+  }
+
+  /* General Alignment */
+  .float-left {
+    float: left;
+    margin: 0 10px;
+  }
+
+  .float-right {
+    float: right;
+    margin: 0 10px;
+  }
+
+}
+
+@media (min-width: 1025px) {
+  .content {
+    min-width: 1015px;
+  }
+
+  /* Grid Dimensions */
+  .content-grid {
+    width: 1000px;
+  }
+
+  .logo-header {
+    right: 150px;
+  }
+
+  .logo-footer {
+    display:block;
+    position: absolute;
+    right: 200px;
+  }
+
+  .course-title {
+    max-width: 450px
+  }
+
+  .header .mdl-layout-title {
+    margin-left: 60px;
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .content {
+    min-width: 1180px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .content {
+    min-width: 1480px;
+  }
+
+  .logo-header {
+    right: 300px;
+  }
+
+  .logo-footer {
+    display:block;
+    position: absolute;
+    right: 300px;
+  }
+
+  .course-title {
+    position: absolute;
+    left:375px;
+    font-size: 24px;
+    max-width: 600px;
+  }
+  
+  .header .mdl-layout-title {
+    margin-left: 90px;
+    max-width: 600px;
+  }
+}
+
+@media (min-width: 1900px) {
+  .content {
+    min-width: 1600px;
+  }
+
+  /* Grid Dimensions */
+  .content-grid {
+    width: 1625px;
+  }
+
+  .logo-header {
+    right: 500px;
+  }
+
+  .logo-footer {
+    display:block;
+    position: absolute;
+    right: 500px;
+  }
+
+  .course-title {
+    position: absolute;
+    left:550px;
+  }
+  
+  .header .mdl-layout-title {
+    margin-left: 120px;
+    max-width: 600px;
+  }
+}
+
+@media (min-width: 2200px) {
+  .logo-header {
+    right: 700px;
+  }
+
+  .logo-footer {
+    display:block;
+    position: absolute;
+    right: 700px;
+  }
+
+  .course-title {
+    position: absolute;
+    left:725px;
+  }
+  
+  .header .mdl-layout-title {
+    margin-left: 340px;
+  }
+}
