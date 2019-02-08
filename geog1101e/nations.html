@@ -11,10 +11,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="/shared/OOL/lib/css/material.min.css" />
-    <link rel="stylesheet" type="text/css" href="/shared/OOL/custom/css/base-styles.css" />
-    <link rel="stylesheet" type="text/css" href="/shared/OOL/custom/css/uga-athens.css" />
-    <link rel="stylesheet" type="text/css" href="/shared/OOL/custom/css/elc.css" />
+    <link rel="stylesheet" type="text/css" href="/static/lib/css/material.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/custom/css/base-styles.css" />
+    <link rel="stylesheet" type="text/css" href="/static/custom/css/uga-athens.css" />
 
 
   </head>
@@ -37,19 +36,19 @@
     <div id="app">
 
         <div v-for="n in nations">
-            <h2>{{ n.name }}</h2>
+            <h2>{{n.name}}</h2>
             <div class="country-wrapper">
-                <div><img src="getUrl()" /></div>
-                <div>{{ n.flag }}</div>
-                <div>{{ n.population }}<br />
-                     {{ n.ethnicityBreakdown }}</div>
-                <div>{{ n.largestCity}}</div>
-                <div>{{ n.politicalSystem }}</div>
-                <div>{{ n.econStratDesc }}</div>
-                <div>{{ n.language }}<br />
-                     {{ n.religion }}</div>
-                <div>{{ n.popPyramid }}</div>
-                <div>{{ n.povertyIndex }}</div>
+                <div><img v-bind:src="" /></div>
+                <div>{{n.flag}}</div>
+                <div>{{n.population}}<br />
+                     {{n.ethnicityBreakdown}}</div>
+                <div>{{n.largestCity}}</div>
+                <div>{{n.politicalSystem}}</div>
+                <div>{{n.econStratDesc}}</div>
+                <div>{{n.language}}<br />
+                     {{n.religion}}</div>
+                <div>{{n.popPyramid}}</div>
+                <div>{{n.povertyIndex}}</div>
             </div>
         </div>
     </div>
@@ -64,7 +63,7 @@
 </div>
 </footer></main></div>
 <p>
-<script src="/shared/OOL/lib/js/material.min.js"></script>
+<script src="/static/lib/js/material.min.js"></script>
 <script src="https://unpkg.com/vue"></script>
 
 <script>
