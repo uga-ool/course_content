@@ -11,9 +11,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="/static/lib/css/material.min.css" />
-    <link rel="stylesheet" type="text/css" href="/static/custom/css/base-styles.css" />
-    <link rel="stylesheet" type="text/css" href="/static/custom/css/uga-athens.css" />
+    <link rel="stylesheet" type="text/css" href="/course-content/static/lib/css/material.min.css" />
+    <link rel="stylesheet" type="text/css" href="/course-content/static/custom/css/base-styles.css" />
+    <link rel="stylesheet" type="text/css" href="/course-content/static/custom/css/uga-athens.css" />
 
 
   </head>
@@ -38,7 +38,7 @@
         <div v-for="n in nations">
             <h2>{{n.name}}</h2>
             <div class="country-wrapper">
-                <div><img v-bind:src="'/assets/img/flags/' + n.flag" /></div>
+                <div><img v-bind:src="'/course_content/geog1101e/assets/img/flags/' + n.flag" /></div>
                 <div>{{n.flag}}</div>
                 <div>{{n.population}}<br />
                      {{n.ethnicityBreakdown}}</div>
@@ -63,7 +63,7 @@
 </div>
 </footer></main></div>
 <p>
-<script src="/static/lib/js/material.min.js"></script>
+<script src="/course-content/static/lib/js/material.min.js"></script>
 <script src="https://unpkg.com/vue"></script>
 
 <script>
