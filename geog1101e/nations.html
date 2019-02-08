@@ -22,6 +22,14 @@
   <style>
       .country-wrapper {
           display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: 1fr 1fr 2fr 2fr;
+          grid-gap: 10px;
+      }
+
+      .flag {
+          grid-column: 1;
+          grid-row: 1 / 3;
       }
   </style>
   <body>
@@ -40,17 +48,16 @@
             <div v-for="n in nations">
                 <h2>{{n.name}}</h2>
                 <div class="country-wrapper">
-                    <div><img v-bind:src="'assets/img/flags/' + n.flag" /></div>
-                    <div>{{n.flag}}</div>
-                    <div>{{n.population}}<br />
+                    <div class="flag"><img v-bind:src="'assets/img/flags/' + n.flag" /></div>
+                    <div class="pop_breakdown">{{n.population}}<br />
                         {{n.ethnicityBreakdown}}</div>
-                    <div>{{n.largestCity}}</div>
-                    <div>{{n.politicalSystem}}</div>
-                    <div>{{n.econStratDesc}}</div>
-                    <div>{{n.language}}<br />
+                    <div class="city">{{n.largestCity}}</div>
+                    <div class="politics">{{n.politicalSystem}}</div>
+                    <div class="econ">{{n.econStratDesc}}</div>
+                    <div class="lang_reli">{{n.language}}<br />
                         {{n.religion}}</div>
-                    <div>{{n.popPyramid}}</div>
-                    <div>{{n.povertyIndex}}</div>
+                    <div class="pop_pyramid">{{n.popPyramid}}</div>
+                    <div class="povertyIndex">{{n.povertyIndex}}</div>
                 </div>
             </div>
         </div>
