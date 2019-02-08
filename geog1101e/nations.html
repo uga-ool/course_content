@@ -38,7 +38,7 @@
         <div v-for="n in nations">
             <h2>{{n.name}}</h2>
             <div class="country-wrapper">
-                <div><img v-bind:src="" /></div>
+                <div><img v-bind:src="'/assets/img/flags/' + n.flag" /></div>
                 <div>{{n.flag}}</div>
                 <div>{{n.population}}<br />
                      {{n.ethnicityBreakdown}}</div>
