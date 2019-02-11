@@ -19,7 +19,7 @@
 
   </head>
   <style>
-      #app {
+      .page-wrapper {
           min-height: 1000px;
       }
       .country-wrapper {
@@ -85,23 +85,24 @@
     <main class="main mdl-layout__content">
     <div class="container mdl-grid">
     <div class="content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--12-col">
-        <div id="app">
-
-            <div v-for="n in nations">
-                <h2>{{n.name}}</h2>
-                <div class="country-wrapper">
-                    <div class="flag"><img v-bind:src="'assets/img/flags/' + n.flag" /></div>
-                    <div class="pop_breakdown">{{n.population}}<br />
-                        {{n.ethnicityBreakdown}}</div>
-                    <div class="city">{{n.largestCity}}</div>
-                    <div class="politics">{{n.politicalSystem}}</div>
-                    <div class="econ">{{n.econStratDesc}}</div>
-                    <div class="lang_reli">{{n.language}}<br />
-                        {{n.religion}}</div>
-                    <div class="pop_pyramid">{{n.popPyramid}}</div>
-                    <div class="povertyIndex">{{n.povertyIndex}}</div>
+        <div class ="page-wrapper">
+            <div id="app">
+                <div v-for="n in nations">
+                    <h2>{{n.name}}</h2>
+                    <div class="country-wrapper">
+                        <div class="flag"><img v-bind:src="'assets/img/flags/' + n.flag" /></div>
+                        <div class="pop_breakdown">{{n.population}}<br />
+                            {{n.ethnicityBreakdown}}</div>
+                        <div class="city">{{n.largestCity}}</div>
+                        <div class="politics">{{n.politicalSystem}}</div>
+                        <div class="econ">{{n.econStratDesc}}</div>
+                        <div class="lang_reli">{{n.language}}<br />
+                            {{n.religion}}</div>
+                        <div class="pop_pyramid">{{n.popPyramid}}</div>
+                        <div class="povertyIndex">{{n.povertyIndex}}</div>
+                    </div>
+                    <hr />
                 </div>
-                <hr />
             </div>
         </div>
     <hr />
