@@ -24,9 +24,12 @@
       }
       .country-wrapper {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          grid-template-rows: 1fr 1fr 2fr 2fr;
+          grid-template-columns: repeat(auto-fill, 1fr);
+          grid-template-rows: auto;
           grid-gap: 10px;
+          padding: 20px;
+          border: 1px solid #000000;
+          border-radius: 15px;
       }
 
       .flag {
@@ -55,8 +58,12 @@
       }
 
       .econ {
-          grid-column: 1 / -1;
+          grid-column: 1 / 4;
           grid-row: 3;
+      }
+
+      .econ h3 {
+          text-align: center;
       }
 
       .lang_reli {
@@ -65,13 +72,26 @@
       }
 
       .pop_pyramid {
-          grid-column: 2;
+          grid-column: 2 / 4;
           grid-row: 4;
       }
 
-      .poverty {
-          grid-column: 3;
-          grid-row: 4;
+      .pop_pyramid h3, .pop_pyramid figcaption {
+          text-align: center;
+      }
+
+      .pop_pyramid img {
+          display: block;
+          margin: 0 auto;
+      }
+
+      .nation h2 {
+          text-align: center;
+      }
+
+      .section {
+          border: 1px dotted #000000;
+          padding-left: 15px;
       }
   </style>
   <body>
@@ -87,19 +107,48 @@
     <div class="content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--12-col">
         <div class ="page-wrapper">
             <div id="app">
-                <div v-for="n in nations">
+                <div v-for="n in nations" class="nation">
                     <h2>{{n.name}}</h2>
                     <div class="country-wrapper">
                         <div class="flag"><img v-bind:src="'assets/img/flags/' + n.flag" /></div>
-                        <div class="pop_breakdown">{{n.population}}<br />
-                            {{n.ethnicityBreakdown}}</div>
-                        <div class="city">{{n.largestCity}}</div>
-                        <div class="politics">{{n.politicalSystem}}</div>
-                        <div class="econ">{{n.econStratDesc}}</div>
-                        <div class="lang_reli">{{n.language}}<br />
-                            {{n.religion}}</div>
-                        <div class="pop_pyramid">{{n.popPyramid}}</div>
-                        <div class="povertyIndex">{{n.povertyIndex}}</div>
+                        <div class="population section">
+                            <h3>Population</h3>
+                            {{n.population}}
+                        </div>
+                        <div class="ethnicity section">
+                            <h3>Ethnicity Breakdown</h3>
+                            <ul>
+                                <li v-for="(value, key) in n.ethnicityBreakdown">{{key}}: {{value}}</li>
+                            </ul>
+                        </div> 
+                        <div class="city section">
+                            <h3>Largest City</h3>
+                            <p>{{n.largestCity.name}}: {{n.largestCity.population}}</p>
+                        </div>
+                        <div class="politics section">
+                            <h3>Political System</h3>
+                            <p>{{n.politicalSystem}}</p>
+                        </div>
+                        <div class="econ section">
+                            <h3>Economic Strategy</h3>
+                            <p>{{n.econStratDesc}}</p>
+                        </div>
+                        <div class="lang_reli section">
+                            <h3>Official Language</h3>
+                            <p>{{n.language}}</p>
+                            <h3>Religion</h3>
+                            <p v-if="n.religion.url == ''">{{n.religion.title}}</p>
+                            <p v-else><a v-bind:href="n.religion.url" target="_blank">{{n.religion.title}}</a></p>
+                            <h3>Poverty Index</h3>
+                            <ul>
+                                <li v-for="(value, key) in n.povertyIndex">{{key}}: {{value}}</li>
+                            </ul>
+                        </div>
+                        <div class="pop_pyramid section">
+                            <h3>Population Pyramid</h3>
+                            <img v-bind:src="'assets/img/flags/' + n.popPyramid.image" />
+                            <figcaption>Population Pyramid for {{n.name}} (<a v-bind:href="n.popPyramid.url" target="_blank">Source</a>)</figcaption>
+                        </div>
                     </div>
                     <hr />
                 </div>
