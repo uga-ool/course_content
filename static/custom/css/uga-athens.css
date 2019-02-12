@@ -11,9 +11,17 @@
   color: #000000;
 }
 
+/*
+
 .logo-header {
  background: url('../../img/logo-color-50h.png') center right no-repeat;
 }
+
+.logo-footer {
+  background: url('../../img/footer-logo-white-100.png') center right no-repeat;
+}
+
+*/
 
 .footer {
   background-color: #000000;
@@ -21,10 +29,6 @@
 
 .footer .mdl-logo {
   color: #ffffff;
-}
-
-.logo-footer {
-  background: url('../../img/footer-logo-white-100.png') center right no-repeat;
 }
 
 /* unvisited link */
