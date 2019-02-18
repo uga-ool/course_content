@@ -129,20 +129,25 @@
                             <h3>Political System</h3>
                             <p>{{n.politicalSystem}}</p>
                         </div>
-                        <div class="econ section">
+                        <!--<div class="econ section">
+                            
+                        </div>-->
+                        <div class="lang_reli section">
                             <h3>Economic Strategy</h3>
                             <p>{{n.econStratDesc}}</p>
-                        </div>
-                        <div class="lang_reli section">
-                            <h3>Official Language</h3>
-                            <p>{{n.language}}</p>
-                            <h3>Religion</h3>
-                            <p v-if="n.religion.url == ''">{{n.religion.title}}</p>
-                            <p v-else><a v-bind:href="n.religion.url" target="_blank">{{n.religion.title}}</a></p>
-                            <h3>Poverty Index</h3>
+
+                            <h3>Economic Indicators</h3>
                             <ul>
                                 <li v-for="(value, key) in n.povertyIndex">{{key}}: {{value}}</li>
                             </ul>
+
+                            <h3>Official Language</h3>
+                            <p>{{n.language}}</p>
+                            
+                            <h3>Religion</h3>
+                            <p v-if="n.religion.url == ''">{{n.religion.title}}</p>
+                            <p v-else><a v-bind:href="n.religion.url" target="_blank">{{n.religion.title}}</a></p>
+                            
                         </div>
                         <div class="pop_pyramid section">
                             <h3>Population Pyramid</h3>
@@ -187,7 +192,7 @@
             population: "23.7 million"
         },
         politicalSystem: "Democratic",
-        econStratDesc: "Export orientation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Blandit libero volutpat sed cras ornare arcu. Vivamus at augue eget arcu. Metus aliquam eleifend mi in nulla posuere. Gravida in fermentum et sollicitudin. Semper viverra nam libero justo laoreet sit. Fringilla ut morbi tincidunt augue interdum velit. Neque convallis a cras semper auctor neque. Quam quisque id diam vel quam elementum pulvinar etiam non. Nullam ac tortor vitae purus faucibus ornare. At risus viverra adipiscing at in tellus integer feugiat scelerisque. Egestas maecenas pharetra convallis posuere morbi leo.",
+        econStratDesc: "Export orientation",
         language: "No Official Language",
         religion: { 
             title: "Secular State, 78% Christian",
